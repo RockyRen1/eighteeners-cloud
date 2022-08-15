@@ -1,0 +1,47 @@
+server:
+  port: 8101
+spring:
+  cloud:
+    sentinel:
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 120.27.217.122:8848
+            data-id: sentinel
+            group-id: rocky
+            data-type: json
+            rule-type: degrade
+#            namespace: 686fa5ec-41fa-44f0-a15b-785d15cadf09
+            namespace: 7424ab53-e3bc-4642-87bb-2957e39678d8
+      transport:
+        dashboard: localhost:8080
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: 120.27.217.122:8848
+#        namespace: 686fa5ec-41fa-44f0-a15b-785d15cadf09
+        namespace: 7424ab53-e3bc-4642-87bb-2957e39678d8
+        group: rocky
+      discovery:
+        server-addr: 120.27.217.122:8848
+        group: rocky
+#        namespace: 686fa5ec-41fa-44f0-a15b-785d15cadf09
+        namespace: 7424ab53-e3bc-4642-87bb-2957e39678d8
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+  application:
+    name: forum
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+seata:
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      default: 127.0.0.1:8091
+    enable-degrade: false
+    disable-global-transaction: false

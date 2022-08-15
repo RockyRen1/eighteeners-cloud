@@ -1,0 +1,9 @@
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+  profiles:
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
