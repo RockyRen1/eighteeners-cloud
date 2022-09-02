@@ -5,11 +5,11 @@
     <parent>
         <groupId>com.rocky.eighteeners</groupId>
         <artifactId>eighteeners-cloud</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
     </parent>
     <groupId>com.rocky.eighteeners</groupId>
     <artifactId>forum</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>forum</name>
     <description>Demo project for Spring Boot</description>
     <properties>

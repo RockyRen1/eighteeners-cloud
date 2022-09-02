@@ -15,7 +15,8 @@ public class EntityGenerator {
     public static final String url = "jdbc:postgresql://192.168.225.142:5432/pie";
 
     public static void main(String[] args) throws Exception {
-        FileGenerator.build(Empty.class);
+//        FileGenerator.build(Empty.class);
+        new FileGenerator().useJSR310Types().with(Empty.class).generate();
     }
 
     @Tables(
