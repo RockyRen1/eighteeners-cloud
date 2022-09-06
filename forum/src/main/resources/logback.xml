@@ -8,7 +8,7 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/home/work/logs/fmp/log.log</file>
+        <file>/opt/eighteener/forum/logs/log.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>/home/work/logs/fmp/log.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
             <maxFileSize>500MB</maxFileSize>
@@ -25,9 +25,9 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
         </filter>
-        <File>/home/work/logs/fmp/error.log</File>
+        <File>/opt/eighteener/forum/logs/error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>/home/work/logs/fmp/error.%d{yyyy-MM-dd}.log.%i.log.gz</fileNamePattern>
+            <fileNamePattern>/opt/eighteener/forum/logs/error.%d{yyyy-MM-dd}.log.%i.log.gz</fileNamePattern>
             <maxFileSize>500MB</maxFileSize>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
@@ -39,10 +39,10 @@
     </appender>
 
     <appender name="SQL" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/home/work/logs/fmp/sql.log</file>
+        <file>/opt/eighteener/forum/logs/sql.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <maxFileSize>500MB</maxFileSize>
-            <fileNamePattern>/home/work/logs/fmp/sql.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <fileNamePattern>/opt/eighteener/forum/logs/sql.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
