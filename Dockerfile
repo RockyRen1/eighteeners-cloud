@@ -18,4 +18,4 @@ VOLUME ["/logs", "/opt/eighteener/forum/logs"]
 ENV CONFIGFILE="/opt/eighteener/forum/bootstrap.yml,/opt/eighteener/forum/application.yml"
 ENV PROFILE="prod" LOGLEVEL="INFO" PARAMS=""
 
-ENTRYPOINT ["sh", "-c", "java $PARAMS -Djava.security.egd=file:/dev/./urandom -jar app.jar --spring.config.location=$CONFIGFILE --spring.profiles.active=$PROFILES --logback.level.root=$LOGLEVEL"]
+ENTRYPOINT ["sh", "-c", "java $PARAMS -Djava.security.egd=file:/dev/./urandom -jar app.jar --spring.config.location=$CONFIGFILE --spring.profiles.active=$PROFILE --logback.level.root=$LOGLEVEL"]
